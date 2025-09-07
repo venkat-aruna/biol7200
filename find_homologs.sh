@@ -11,3 +11,5 @@ tblastn -query "$qf_name" -subject "$sf_name" -outfmt "6 pident qlen length" -ou
 #filter output
 awk '{if ($1>30 && $3>($4*0.9) print $0}' matches.txt > "$of_name"
 wc -l $of_name
+
+#END
